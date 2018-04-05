@@ -24,7 +24,7 @@ First, glance over the [prerequisite section](#prereqs) to make sure you're read
 4. Use [shortcodes](https://codex.wordpress.org/shortcode) to embed donation ready forms [see demo](https://jessepollak.github.io/card/) 
 5. Sit back, relax, and enjoy the fruits of your labor!
 
-### Prerequisites<a name="prereqs"></a>
+###<a name="prereqs">Prerequisites</a>
 
 #####Required:
 1. An [Elavon](https://www.elavon.com/index.html) merchant account, with API credentials for their live system.
@@ -78,10 +78,10 @@ Add additional notes about how to deploy this on a live system
 ## Constructed Using
 This is not an exhaustive list, but highlights key 3rd party software components used by this plugin.
 
-* [Card](https://github.com/jessepollak/card) *A JS Credit Card library.* Copyright (c) 2014 Jesse Pollak.
-* [Symfony<sup>TM</sup> Validator Component](https://symfony.com/components/Validator)
-* 
-
+* [Card](https://github.com/jessepollak/card) Copyright (c) 2014 Jesse Pollak.
+* [Symfony<sup>TM</sup> Validator Component](https://symfony.com/components/Validator) Copyright (c) 2004-2018 Fabien Potencier
+* [Bootstrap](https://getbootstrap.com/) Copyright (c) 2011-2018 Twitter, Inc. Copyright (c) 2011-2018 The Bootstrap Authors
+* [Bootstrap Toggle](http://www.bootstraptoggle.com/) Copyright (c) 2011-2014 Min Hur, The New York Times Company
 
 ## Authors
 
