@@ -1,4 +1,4 @@
-# Elavon Donatin Plugin
+# Elavon Donation Plugin
 
 Quickly add a donation form to your site, with automatic credit card processing, using [Elavon's Converge<sup>SM</sup> API](https://www.elavon.com/converge.html).
 
@@ -15,7 +15,7 @@ Accepts Visa, MasterCard, AmEx, Discover, and Diner's Club.
 ![alt text](https://drive.google.com/uc?id=1DeM7EMNGQkgSylvvTiat_cZWAYRB4ub1)
 
 ## Getting Started
-First, glance over the [prerequisite section](#prereqs) to make sure you're ready to complete the setup:
+First, glance over the [requirements section](#requirements) to make sure you're ready to complete the setup:
 1. Clone or download and unzip the plugin:
     * [GitHub](https://github.com/josephldaigle/elavon-donation.git)
 2. Upload `elavon-donation/` directory to your site's `wp-content/plugins/ directory`.
@@ -24,7 +24,7 @@ First, glance over the [prerequisite section](#prereqs) to make sure you're read
 4. Use [shortcodes](https://codex.wordpress.org/shortcode) to embed donation ready forms [see demo](https://jessepollak.github.io/card/) 
 5. Sit back, relax, and enjoy the fruits of your labor!
 
-### <a name="prereqs">Prerequisites</a>
+### <a name="requirements">Requirements</a>
 
 ##### Required:
 1. An [Elavon](https://www.elavon.com/index.html) merchant account, with API credentials for their live system.

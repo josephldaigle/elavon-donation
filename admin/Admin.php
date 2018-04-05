@@ -209,6 +209,7 @@ class Admin
 		);
 	}
 
+	// only runs if the option is changed
 	public function update_option( $option_name, $old_value, $new_value ) {
 		var_dump($option_name, $old_value, $new_value);
 		die('update_option hooked');

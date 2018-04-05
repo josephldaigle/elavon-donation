@@ -37,9 +37,19 @@ class Sanitizer
 	 * @param $input
 	 * @return mixed
 	 */
-	public function edp_api_account_number_prod( $input )
+	public function edp_api_account_number_prod( $input_val )
 	{
-		return $input;
+		$violations = $this->validator->validate('Bernhard', array(
+				new Length(array('min' => 10)),
+		    new NotBlank(),
+		));
+
+		if (0 !== count($violations)) {
+			// there are errors, now you can show them
+			foreach ($violations as $violation) {
+				echo $violation->getMessage().'<br>';
+			}
+		}
 	}
 
 	/**
