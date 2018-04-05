@@ -84,7 +84,7 @@ class Elavon_Donation
 
 		// add top-level admin menu
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'register_admin_menu' );
-		$this->loader->add_action( 'add_option', $plugin_admin, 'update_option', 10, 3 );
+//		$this->loader->add_action( 'add_option', $plugin_admin, 'update_option', 10, 3 );
 
 		// register admin settings
 		$this->loader->add_action(  'admin_init', $plugin_admin, 'init_admin_options' );

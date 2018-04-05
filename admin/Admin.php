@@ -94,7 +94,6 @@ class Admin
 		 */
 
 		if( $hook == 'toplevel_page_elavon-donation' ) {
-//			wp_enqueue_script( 'jquery_slim', '//code.jquery.com/jquery-3.2.1.slim.min.js', array('jquery'));
 			wp_enqueue_script( 'popper_js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'));
 			wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'));
 			wp_enqueue_script( 'bootstrap_toggle_js', '//gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js', array('jquery', 'bootstrap_js'));
@@ -181,12 +180,13 @@ class Admin
 			'edp_api_test_settings'
 		);
 
-		// register options
+		// register live account options
 		register_setting( 'edp_options', 'edp_api_mode'/*, array($this->validator, 'edp_api_mode')*/ );
 		register_setting( 'edp_options', 'edp_api_account_number_prod',  array($this->validator, 'edp_api_account_number_prod') );
 		register_setting( 'edp_options', 'edp_api_user_id_prod', array($this->validator, 'edp_api_user_id_prod') );
 		register_setting( 'edp_options', 'edp_api_pass_prod', array($this->validator, 'edp_api_pass_prod') );
 
+		// register test account options
 		register_setting( 'edp_options', 'edp_api_account_number_test', array($this->validator, 'edp_api_account_number_test') );
 		register_setting( 'edp_options', 'edp_api_user_id_test', array($this->validator, 'edp_api_user_id_test') );
 		register_setting( 'edp_options', 'edp_api_pass_test', array($this->validator, 'edp_api_pass_test') );
@@ -209,10 +209,10 @@ class Admin
 		);
 	}
 
-	// only runs if the option is changed
+	// only runs if the option is changes
 	public function update_option( $option_name, $old_value, $new_value ) {
-		var_dump($option_name, $old_value, $new_value);
-		die('update_option hooked');
+//		var_dump($option_name, $old_value, $new_value);
+//		die('update_option hooked');
 
 	}
 
