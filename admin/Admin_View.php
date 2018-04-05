@@ -7,7 +7,6 @@
 
 namespace EDP_Donation;
 
-
 /**
  * Admin_View.
  *
@@ -47,11 +46,8 @@ class Admin_View
 	 */
 	public function edp_api_mode_input_html()
 	{
-		printf(
-			'<div class="form-group">
-			    <input type="checkbox" id="edp_api_mode" class="form-control" name="edp_api_mode" %s data-toggle="toggle"
-			    	data-onstyle="success" data-offstyle="primary" data-on="Live" data-off="Demo" data-size="small" data-style="quick" />
-		  	</div>',
+		printf( '<input type="checkbox" id="edp_api_mode" name="edp_api_mode" %s data-toggle="toggle"
+			    	data-onstyle="success" data-offstyle="primary" data-on="Live" data-off="Demo" data-size="small" data-style="quick" />',
 			( $val = get_option('edp_api_mode') ) ? 'checked' : ''
 		);
 	}
@@ -61,10 +57,7 @@ class Admin_View
 	 */
 	public function edp_api_account_number_prod_html()
 	{
-		printf(
-	'<div class="form-group">
-				<input type="text" id="edp_api_account_number_prod" class="form-control" name="edp_api_account_number_prod" value="%s" required />
-			</div>',
+		printf( '<input type="text" id="edp_api_account_number_prod" name="edp_api_account_number_prod" value="%s" required />',
 			esc_attr( ( $val = get_option('edp_api_account_number_prod') ) ? $val : '' )
 		);
 	}
@@ -74,10 +67,7 @@ class Admin_View
 	 */
 	public function edp_api_user_id_prod_html()
 	{
-		printf(
-	'<div class="form-group">
-				<input type="text" id="edp_api_user_id_prod" class="form-control" name="edp_api_user_id_prod" value="%s" required />
-			</div>',
+		printf( '<input type="text" id="edp_api_user_id_prod" name="edp_api_user_id_prod" value="%s" required />',
 			esc_attr( ( $val = get_option('edp_api_user_id_prod') ) ? $val : '' )
 		);
 	}
@@ -87,39 +77,26 @@ class Admin_View
 	 */
 	public function edp_api_pass_prod_html()
 	{
-		printf(
-			'<div class="form-group row">
-				<input type="text" id="edp_api_pass_prod" class="form-control" name="edp_api_pass_prod" value="%s" required />
-			</div>',
+		printf( '<input type="text" id="edp_api_pass_prod" name="edp_api_pass_prod" value="%s" required />',
 			esc_attr( ( $val = get_option('edp_api_pass_prod') ) ? $val : '' )
 		);
 	}
 
-
 	public function edp_api_account_number_test_html(  ) {
-		printf(
-			'<div class="form-group row">
-				<input type="text" id="edp_api_account_number_test" class="form-control" name="edp_api_account_number_test" value="%s" required />
-			</div>',
+		printf( '<input type="text" id="edp_api_account_number_test" name="edp_api_account_number_test" value="%s" required />',
 			esc_attr( ( $val = get_option('edp_api_account_number_test') ) ? $val : '' )
 		);
 	}
 
 	public function edp_api_user_id_test_html(  ) {
-		printf(
-			'<div class="form-group row">
-				<input type="text" id="edp_api_user_id_test" class="form-control" name="edp_api_user_id_test" value="webpage" required />
-			</div>
+		printf( '<input type="text" id="edp_api_user_id_test" name="edp_api_user_id_test" value="webpage" required />
 			<small id="edp_api_user_id_test_help" class="form-text text-muted">You shouldn\'t need to change this value.</small>',
 			esc_attr( ( $val = get_option('edp_api_user_id_test') ) ? $val : '' )
 		);
 	}
 
 	public function edp_api_pass_test_html(  ) {
-		printf(
-			'<div class="form-group row">
-				<input type="text" id="edp_api_pass_test" class="form-control" name="edp_api_pass_test" value="%s" required />
-			</div>',
+		printf( '<input type="text" id="edp_api_pass_test" name="edp_api_pass_test" value="%s" required />',
 			esc_attr( ( $val = get_option('edp_api_pass_test') ) ? $val : '' )
 		);
 	}

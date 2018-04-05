@@ -8,7 +8,7 @@
 namespace EDP_Donation;
 
 
-use EDP_Donation\Security\Validator;
+use EDP_Donation\Security\Sanitizer;
 
 /**
  * Admin.
@@ -33,7 +33,7 @@ class Admin
 	private $view;
 
 	/**
-	 * @var Validator
+	 * @var Sanitizer
 	 */
 	private $validator;
 
@@ -46,7 +46,7 @@ class Admin
 	public function __construct( string $plugin_name,
 								string $version,
 								Admin_View $view,
-								Validator $validator )
+								Sanitizer $validator )
 	{
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
@@ -120,6 +120,7 @@ class Admin
 			'elavon-donation',
 			'edp_api_mode_settings'
 		);
+
 		// production api credentials
 		// register settings section
 		add_settings_section(
@@ -159,7 +160,7 @@ class Admin
 			'elavon-donation'
 		);
 		add_settings_field(
-			'edp_account_number_test',
+			'edp_api_account_number_test',
 			'Test API Key:',
 			array( $this->view, 'edp_api_account_number_test_html' ),
 			'elavon-donation',
@@ -167,7 +168,7 @@ class Admin
 		);
 		add_settings_field(
 			'edp_api_user_id_test',
-			'Test API Password:',
+			'Test API User Id:',
 			array( $this->view, 'edp_api_user_id_test_html' ),
 			'elavon-donation',
 			'edp_api_test_settings'
@@ -186,7 +187,7 @@ class Admin
 		register_setting( 'edp_options', 'edp_api_user_id_prod', array($this->validator, 'edp_api_user_id_prod') );
 		register_setting( 'edp_options', 'edp_api_pass_prod', array($this->validator, 'edp_api_pass_prod') );
 
-		register_setting( 'edp_options', 'edp_account_number_test', array($this->validator, 'edp_account_number_test') );
+		register_setting( 'edp_options', 'edp_api_account_number_test', array($this->validator, 'edp_api_account_number_test') );
 		register_setting( 'edp_options', 'edp_api_user_id_test', array($this->validator, 'edp_api_user_id_test') );
 		register_setting( 'edp_options', 'edp_api_pass_test', array($this->validator, 'edp_api_pass_test') );
 	}
@@ -206,6 +207,12 @@ class Admin
 			'', //plugin_dir_url( dirname( __FILE__  )) . 'public/icon-donate.png'
 			89
 		);
+	}
+
+	public function update_option( $option_name, $old_value, $new_value ) {
+		var_dump($option_name, $old_value, $new_value);
+		die('update_option hooked');
+
 	}
 
 }

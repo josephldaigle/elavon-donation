@@ -20,7 +20,6 @@
 
     ?>
 
-
     <form action="options.php" method="POST">
 		<?php
 			// output security fields for the registered setting "edp_options"

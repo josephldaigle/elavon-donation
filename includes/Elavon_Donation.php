@@ -7,7 +7,8 @@
 
 namespace EDP_Donation;
 
-use EDP_Donation\Security\Validator;
+use EDP_Donation\Security\Sanitizer;
+use Symfony\Component\Validator\Validation;
 
 /**
  * Elavon_Donation.
@@ -74,7 +75,7 @@ class Elavon_Donation
 		$plugin_admin = new Admin( $this->get_plugin_name(),
 			$this->get_plugin_version(),
 			new Admin_View(),
-			new Validator()
+			new Sanitizer(Validation::createValidator())
 		);
 
 		// enqueue scripts and styles
@@ -83,6 +84,7 @@ class Elavon_Donation
 
 		// add top-level admin menu
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'register_admin_menu' );
+		$this->loader->add_action( 'add_option', $plugin_admin, 'update_option', 10, 3 );
 
 		// register admin settings
 		$this->loader->add_action(  'admin_init', $plugin_admin, 'init_admin_options' );
