@@ -24,12 +24,12 @@ First, glance over the [prerequisite section](#prereqs) to make sure you're read
 4. Use [shortcodes](https://codex.wordpress.org/shortcode) to embed donation ready forms [see demo](https://jessepollak.github.io/card/) 
 5. Sit back, relax, and enjoy the fruits of your labor!
 
-###<a name="prereqs">Prerequisites</a>
+### <a name="prereqs">Prerequisites</a>
 
-#####Required:
+##### Required:
 1. An [Elavon](https://www.elavon.com/index.html) merchant account, with API credentials for their live system.
 
-#####Optional:
+##### Optional:
 1. Valid credentials for Elavon's demo API.
 
 
