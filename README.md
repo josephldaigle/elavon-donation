@@ -4,7 +4,7 @@ Quickly deploy a donation form using the [Elavon Converge<sup>SM</sup> API](http
  
   
 Run the plugin using Elavon's Demo site:
-![alt text](https://github.com/josephldaigle/elavon-donation/img/admin_mode_toggle_live.png "Toggle for Live/Test mode.")
+![alt text](https://drive.google.com/open?id=1QCewn05Fp8N2oBkGZMCSGBlmteFub0AU)
 
 ## Getting Started
 
