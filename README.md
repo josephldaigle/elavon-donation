@@ -1,22 +1,30 @@
 # Elavon Donatin Plugin
 
-Quickly deploy a donation form using the [Elavon Converge<sup>SM</sup> API](https://www.elavon.com/converge.html).
+Quickly add a donation form to your site, with automatic credit card processing, using [Elavon's Converge<sup>SM</sup> API](https://www.elavon.com/converge.html).
+
+Accepts Visa, MasterCard, AmEx, Discover, and Diner's Club.
  
-  
-Run the plugin using Elavon's Demo site:
+## Features:
+* Simple setup and configuration
+* Embed forms in your site using shortcodes
+* Create your own forms, and have them handled by the plugin
+* Focus on your project, let the plugin handle the hard part
+* Run the plugin using Elavon's Demo site:
 
 ![alt text](https://drive.google.com/uc?id=1QCewn05Fp8N2oBkGZMCSGBlmteFub0AU)
 ![alt text](https://drive.google.com/uc?id=1DeM7EMNGQkgSylvvTiat_cZWAYRB4ub1)
 
 ## Getting Started
-
-1. Clone or download the plugin from [GitHub](https://github.com/josephldaigle/elavon-donation.git), and place the unzipped files in your project's `wp-content/plugins/ directory`.
+First, glance over the [prerequisite section](#prereqs) to make sure you're ready to complete the setup:
+1. Clone or download and unzip the plugin:
+    * [GitHub](https://github.com/josephldaigle/elavon-donation.git)
+2. Upload `elavon-donation/` directory to your site's `wp-content/plugins/ directory`.
 2. Log into the WordPress admin portal, and activate the plugin.
-3. Embed [shortcodes](https://codex.wordpress.org/shortcode) in your site
+3. Provide the plugin with your API Credentials.
+4. Use [shortcodes](https://codex.wordpress.org/shortcode) to embed donation ready forms [see demo](https://jessepollak.github.io/card/) 
+5. Sit back, relax, and enjoy the fruits of your labor!
 
-
-### Prerequisites
-
+### Prerequisites<a name="prereqs"></a>
 
 #####Required:
 1. An [Elavon](https://www.elavon.com/index.html) merchant account, with API credentials for their live system.
