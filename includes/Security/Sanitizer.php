@@ -61,7 +61,16 @@ class Sanitizer
 	 */
 	public function edp_api_user_id_prod( $input )
 	{
-		return $input;
+		$constraints = array(
+			new Length(array(
+				'min' => 3,
+				'max' => 64,
+				'minMessage' => 'Production API Key field is too short.'
+			)),
+			new NotBlank()
+		);
+
+		return sanitize_text_field($this->validate(get_option('edp_api_account_number_prod'), $input, $constraints));
 	}
 	
 	/**
