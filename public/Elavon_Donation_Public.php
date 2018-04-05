@@ -58,6 +58,9 @@ class Elavon_Donation_Public
 		 * class.
 		 */
 //		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+
+		// include Bootstrap CSS
+		wp_enqueue_style( 'bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
 	}
 
 	/**
@@ -77,6 +80,11 @@ class Elavon_Donation_Public
 		 */
 //		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), $this->version, false );
 //		wp_enqueue_script( 'jquery-card-js', plugin_dir_url( __FILE__ ) . 'js/jquery.card.js', array( 'jquery' ) );
+
+		// include Bootstrap JS
+		wp_enqueue_script( 'jquery_slim', '//code.jquery.com/jquery-3.2.1.slim.min.js');
+		wp_enqueue_script( 'popper_js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
+		wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
 	}
 
 }

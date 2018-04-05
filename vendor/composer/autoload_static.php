@@ -6,7 +6,17 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit751ffec329857522ccea1f92b8655a86
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Validator\\' => 28,
+            'Symfony\\Component\\Translation\\' => 30,
+        ),
         'E' => 
         array (
             'EDP_Donation_Test\\' => 18,
@@ -15,6 +25,18 @@ class ComposerStaticInit751ffec329857522ccea1f92b8655a86
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Validator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/validator',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
         'EDP_Donation_Test\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
