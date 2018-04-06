@@ -162,21 +162,21 @@ class Admin
 		);
 		add_settings_field(
 			'edp_api_account_number_test',
-			'Test Merchant ID:',
+			'Demo Merchant ID:',
 			array( $this->view, 'edp_api_account_number_test_html' ),
 			'elavon-donation',
 			'edp_api_test_settings'
 		);
 		add_settings_field(
 			'edp_api_user_id_test',
-			'User Id:',
+			'Demo User ID:',
 			array( $this->view, 'edp_api_user_id_test_html' ),
 			'elavon-donation',
 			'edp_api_test_settings'
 		);
 		add_settings_field(
 			'edp_api_pass_test',
-			'Test API Password:',
+			'Demo PIN:',
 			array( $this->view, 'edp_api_pass_test_html' ),
 			'elavon-donation',
 			'edp_api_test_settings'

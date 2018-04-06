@@ -38,7 +38,7 @@ class Admin_View
 
 	public function test_section_info()
 	{
-		print '<h4>Test Credentials</h4><small>Used in demo mode.</small>';
+		print '<h4>Demo Credentials</h4><small>Used in demo mode.</small>';
 	}
 
 	/**

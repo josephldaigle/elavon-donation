@@ -72,7 +72,7 @@ class Sanitizer
 			new NotBlank()
 		);
 
-		return sanitize_text_field($this->validate(get_option('edp_api_user_id'), $input, $constraints));
+		return sanitize_text_field($this->validate(get_option('edp_api_user_id_prod'), $input, $constraints));
 	}
 	
 	/**
@@ -87,13 +87,13 @@ class Sanitizer
 			new Length(array(
 				'min' => 5,
 				'max' => 64,
-				'minMessage' => 'Api Password field is too short.',
-				'maxMessage' => 'User id field is too long.'
+				'minMessage' => 'API password field is too short.',
+				'maxMessage' => 'API password field is too long.'
 			)),
 			new NotBlank()
 		);
 
-		return sanitize_text_field($this->validate(get_option('edp_api_user_id'), $input, $constraints));
+		return sanitize_text_field($this->validate(get_option('edp_api_pass_prod'), $input, $constraints));
 
 	}
 
@@ -106,7 +106,17 @@ class Sanitizer
 	 */
 	public function edp_api_account_number_test( $input )
 	{
-		return $input;
+		$constraints = array(
+			new Length(array(
+				'min' => 5,
+				'max' => 64,
+				'minMessage' => 'Test account number field is too short.',
+				'maxMessage' => 'Test account number field is too long.'
+			)),
+			new NotBlank()
+		);
+
+		return sanitize_text_field($this->validate(get_option('edp_api_account_number_test'), $input, $constraints));
 
 	}
 
@@ -119,7 +129,17 @@ class Sanitizer
 	 */
 	public function edp_api_user_id_test( $input )
 	{
-		return $input;
+		$constraints = array(
+			new Length(array(
+				'min' => 5,
+				'max' => 64,
+				'minMessage' => 'Test user id field is too short.',
+				'maxMessage' => 'Test user id number field is too long.'
+			)),
+			new NotBlank()
+		);
+
+		return sanitize_text_field($this->validate(get_option('edp_api_user_id_test'), $input, $constraints));
 
 	}
 
@@ -131,7 +151,17 @@ class Sanitizer
 	 */
 	public function edp_api_pass_test( $input )
 	{
-		return $input;
+		$constraints = array(
+			new Length(array(
+				'min' => 5,
+				'max' => 64,
+				'minMessage' => 'Test password field is too short.',
+				'maxMessage' => 'Test password field is too long.'
+			)),
+			new NotBlank()
+		);
+
+		return sanitize_text_field($this->validate(get_option('edp_api_pass_test'), $input, $constraints));
 	}
 
 	/**
