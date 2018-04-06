@@ -1,0 +1,25 @@
+{
+    "name": "joedaigle/elavon-donation",
+    "description": "A Wordpress plugin that allows sites to accept donations using the Elavon Converge payment API.",
+    "type": "wordpress-plugin",
+    "license": "Copyright (C) 2018, Joseph Daigle. All Rights Reserved.",
+    "authors": [
+        {
+            "name": "Joe Daigle",
+            "email": "josephldaigle@yahoo.com"
+        }
+    ],
+    "require": {
+        "symfony/validator": "^3.4",
+        "defuse/php-encryption": "^2.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "EDP_Donation\\": [ "admin/", "includes/", "public/", "vendor/"],
+            "EDP_Donation_Test\\": "tests/"
+        }
+    }
+}
