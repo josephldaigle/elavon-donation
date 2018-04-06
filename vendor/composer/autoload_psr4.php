@@ -12,4 +12,5 @@ return array(
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'EDP_Donation_Test\\' => array($baseDir . '/tests'),
     'EDP_Donation\\' => array($baseDir . '/admin', $baseDir . '/includes', $baseDir . '/public', $vendorDir . ''),
+    'Defuse\\Crypto\\' => array($vendorDir . '/defuse/php-encryption/src'),
 );

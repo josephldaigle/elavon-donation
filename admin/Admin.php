@@ -71,7 +71,7 @@ class Admin
 		 */
 //		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin.css', array(), $this->version, 'all' );
 		if($hook == 'toplevel_page_elavon-donation') {
-			wp_enqueue_style( 'bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+			wp_enqueue_style( 'bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
 			wp_enqueue_style( 'bootstrap_toggle_css', '//gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css' );
 			wp_enqueue_style( 'admin_page_css', plugins_url('css/admin-style.css', __FILE__) );
 		}
@@ -95,8 +95,10 @@ class Admin
 
 		if( $hook == 'toplevel_page_elavon-donation' ) {
 			wp_enqueue_script( 'popper_js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'));
-			wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'));
+			wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'));
 			wp_enqueue_script( 'bootstrap_toggle_js', '//gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js', array('jquery', 'bootstrap_js'));
+			wp_enqueue_script( 'bootstrap_show_password_js', '//cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.1.2/bootstrap-show-password.min.js', array('jquery', 'bootstrap_js'), false, true);
+			wp_enqueue_script( 'font_awesome', '//use.fontawesome.com/c5971878d4.js');
 			wp_enqueue_script( 'admin-js', plugin_dir_url(__FILE__ ) . 'js/admin.js', array('jquery'));
 		}
 	}
@@ -130,21 +132,21 @@ class Admin
 		);
 		add_settings_field(
 			'edp_api_account_number_prod',
-			'API Key:',
+			'Merchant ID:',
 			array( $this->view, 'edp_api_account_number_prod_html' ),
 			'elavon-donation',
 			'edp_api_prod_settings'
 		);
 		add_settings_field(
 			'edp_api_user_id_prod',
-			'API User Id:',
+			'User ID:',
 			array( $this->view, 'edp_api_user_id_prod_html' ),
 			'elavon-donation',
 			'edp_api_prod_settings'
 		);
 		add_settings_field(
 			'edp_api_pass_prod',
-			'API Password:',
+			'PIN:',
 			array( $this->view, 'edp_api_pass_prod_html' ),
 			'elavon-donation',
 			'edp_api_prod_settings'
@@ -160,14 +162,14 @@ class Admin
 		);
 		add_settings_field(
 			'edp_api_account_number_test',
-			'Test API Key:',
+			'Test Merchant ID:',
 			array( $this->view, 'edp_api_account_number_test_html' ),
 			'elavon-donation',
 			'edp_api_test_settings'
 		);
 		add_settings_field(
 			'edp_api_user_id_test',
-			'Test API User Id:',
+			'User Id:',
 			array( $this->view, 'edp_api_user_id_test_html' ),
 			'elavon-donation',
 			'edp_api_test_settings'

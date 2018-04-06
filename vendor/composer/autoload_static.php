@@ -8,6 +8,7 @@ class ComposerStaticInit751ffec329857522ccea1f92b8655a86
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
     );
 
@@ -23,6 +24,10 @@ class ComposerStaticInit751ffec329857522ccea1f92b8655a86
         array (
             'EDP_Donation_Test\\' => 18,
             'EDP_Donation\\' => 13,
+        ),
+        'D' => 
+        array (
+            'Defuse\\Crypto\\' => 14,
         ),
     );
 
@@ -53,6 +58,10 @@ class ComposerStaticInit751ffec329857522ccea1f92b8655a86
             1 => __DIR__ . '/../..' . '/includes',
             2 => __DIR__ . '/../..' . '/public',
             3 => __DIR__ . '/../..' . '/vendor',
+        ),
+        'Defuse\\Crypto\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/defuse/php-encryption/src',
         ),
     );
 

@@ -19,17 +19,18 @@
         settings_errors( 'edp_messages' );
 
     ?>
+    <div class="container">
+        <form action="options.php" method="POST">
+            <?php
+                // output security fields for the registered setting "edp_options"
+                settings_fields('edp_options');
 
-    <form action="options.php" method="POST">
-		<?php
-			// output security fields for the registered setting "edp_options"
-			settings_fields('edp_options');
+                // output setting sections and their fields
+                do_settings_sections('elavon-donation');
 
-			// output setting sections and their fields
-			do_settings_sections('elavon-donation');
-
-            // output save settings button
-			submit_button('Save');
-		?>
-	</form>
+                // output save settings button
+                submit_button('Save');
+            ?>
+        </form>
+    </div>
 </div>
