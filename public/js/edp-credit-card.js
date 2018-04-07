@@ -1,5 +1,5 @@
 /**
- * Created by joe on 4/3/18.
+ * Created by Joe Daigle on 4/3/18.
  */
 
 jQuery('form[name="edp-donation"]').card({
@@ -13,8 +13,24 @@ jQuery('form[name="edp-donation"]').card({
     placeholders: {
         number: '**** **** **** ****',
         name: 'Fred L Thompson',
-        expiry: '**/****',
+        expiry: '**/**',
         cvc: '***'
+    },
+    messages: {
+        monthYear: ''
     },
     debug: true
 });
+
+
+
+
+/**
+ * Add styles to credit card form.
+ * @type {Element}
+ */
+
+
+// var edp_js_style_script = document.createElement('script');
+// edp_js_style_script.setAttribute('src', window.location.href + );
+// document.head.appendChild(edp_js_style_script);

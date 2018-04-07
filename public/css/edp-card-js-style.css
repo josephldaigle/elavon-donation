@@ -1,0 +1,27 @@
+/*!*****************************************/
+ /** Style Card.js*/
+ /****************************************!*/
+
+@media screen and (max-width: 396px) {
+    #edp-cc-form{
+        overflow: hidden;
+    }
+
+    .jp-card, .jp-card-front, .jp-card, .jp-card-back {
+        /*overflow: hidden;*/
+        min-width: 100%;
+    }
+
+    #edp-cc-form .jp-card-number.jp-card-display {
+        font-size: 16px;
+    }
+
+    #edp-cc-form .jp-card-name.jp-card-display {
+        font-size: 16px;
+    }
+
+    .jp-card .jp-card-front .jp-card-display, .jp-card .jp-card-back .jp-card-display {
+        color: #000;
+    }
+
+}

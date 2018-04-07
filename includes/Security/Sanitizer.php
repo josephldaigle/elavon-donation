@@ -41,14 +41,17 @@ class Sanitizer
 	 */
 	public function edp_api_account_number_prod( $input )
 	{
+		$field_name = 'Account number';
 		$constraints = array(
 				new Length(array(
 					'min' => 5,
 					'max' => 64,
-					'minMessage' => 'Account number field is too short.',
-					'maxMessage' => 'Account number field is too long.'
+					'minMessage' => $field_name . ' is too short.',
+					'maxMessage' => $field_name . ' is too long.'
 				)),
-			    new NotBlank()
+			    new NotBlank( array(
+				    'message' => $field_name . ' cannot be blank.'
+			    )),
 			);
 
 		return sanitize_text_field($this->validate(get_option('edp_api_account_number_prod'), $input, $constraints));
@@ -62,14 +65,17 @@ class Sanitizer
 	 */
 	public function edp_api_user_id_prod( $input )
 	{
+		$field_name = 'User ID';
 		$constraints = array(
 			new Length(array(
 				'min' => 5,
 				'max' => 64,
-				'minMessage' => 'User id field is too short.',
-				'maxMessage' => 'User id field is too long.'
+				'minMessage' => $field_name . ' is too short.',
+				'maxMessage' => $field_name . ' is too long.'
 			)),
-			new NotBlank()
+			new NotBlank(array(
+				'message' => $field_name . ' cannot be blank.'
+			))
 		);
 
 		return sanitize_text_field($this->validate(get_option('edp_api_user_id_prod'), $input, $constraints));
@@ -83,14 +89,17 @@ class Sanitizer
 	 */
 	public function edp_api_pass_prod( $input )
 	{
+		$field_name = 'API password';
 		$constraints = array(
 			new Length(array(
 				'min' => 5,
 				'max' => 64,
-				'minMessage' => 'API password field is too short.',
-				'maxMessage' => 'API password field is too long.'
+				'minMessage' => $field_name . ' is too short.',
+				'maxMessage' => $field_name . ' is too long.'
 			)),
-			new NotBlank()
+			new NotBlank(array(
+				'message' => $field_name . ' cannot be blank.'
+			))
 		);
 
 		return sanitize_text_field($this->validate(get_option('edp_api_pass_prod'), $input, $constraints));
@@ -106,14 +115,17 @@ class Sanitizer
 	 */
 	public function edp_api_account_number_test( $input )
 	{
+		$field_name = 'Account number (demo)';
 		$constraints = array(
 			new Length(array(
 				'min' => 5,
 				'max' => 64,
-				'minMessage' => 'Test account number field is too short.',
-				'maxMessage' => 'Test account number field is too long.'
+				'minMessage' => $field_name . ' is too short.',
+				'maxMessage' => $field_name . ' is too long.'
 			)),
-			new NotBlank()
+			new NotBlank(array(
+				'message' => $field_name . ' cannot be blank.'
+			))
 		);
 
 		return sanitize_text_field($this->validate(get_option('edp_api_account_number_test'), $input, $constraints));
@@ -129,14 +141,17 @@ class Sanitizer
 	 */
 	public function edp_api_user_id_test( $input )
 	{
+		$field_name = 'User ID (demo)';
 		$constraints = array(
 			new Length(array(
 				'min' => 5,
 				'max' => 64,
-				'minMessage' => 'Test user id field is too short.',
-				'maxMessage' => 'Test user id number field is too long.'
+				'minMessage' => $field_name . ' is too short.',
+				'maxMessage' => $field_name . ' is too long.'
 			)),
-			new NotBlank()
+			new NotBlank(array(
+				'message' => $field_name . ' cannot be blank.'
+			))
 		);
 
 		return sanitize_text_field($this->validate(get_option('edp_api_user_id_test'), $input, $constraints));
@@ -151,14 +166,17 @@ class Sanitizer
 	 */
 	public function edp_api_pass_test( $input )
 	{
+		$field_name = 'API password (demo)';
 		$constraints = array(
 			new Length(array(
 				'min' => 5,
 				'max' => 64,
-				'minMessage' => 'Test password field is too short.',
-				'maxMessage' => 'Test password field is too long.'
+				'minMessage' => $field_name . ' is too short.',
+				'maxMessage' => $field_name . ' is too long.'
 			)),
-			new NotBlank()
+			new NotBlank(array(
+				'message' => $field_name . ' cannot be blank.'
+			))
 		);
 
 		return sanitize_text_field($this->validate(get_option('edp_api_pass_test'), $input, $constraints));

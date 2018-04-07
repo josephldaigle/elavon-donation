@@ -135,7 +135,7 @@ class Admin_View
 
 	private function open_input()
 	{
-		print('<div class="row"><div class="form-group col-xs-8 col-sm-6 col-md-4">');
+//		print('<div class="row"><div class="form-group col-xs-10 col-sm-6 col-md-4">');
 	}
 
 	private function close_input()

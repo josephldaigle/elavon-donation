@@ -57,10 +57,8 @@ class Elavon_Donation_Public
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-//		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
-
-		// include Bootstrap CSS
 		wp_enqueue_style( 'bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+		wp_enqueue_style( 'dep_style', plugins_url('css/edp-style.css', __FILE__) );
 	}
 
 	/**

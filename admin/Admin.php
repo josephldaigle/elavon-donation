@@ -69,7 +69,7 @@ class Admin
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-//		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin.css', array(), $this->version, 'all' );
+		// enqueue styles for plugin config page
 		if($hook == 'toplevel_page_elavon-donation') {
 			wp_enqueue_style( 'bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
 			wp_enqueue_style( 'bootstrap_toggle_css', '//gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css' );
@@ -99,7 +99,6 @@ class Admin
 			wp_enqueue_script( 'bootstrap_toggle_js', '//gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js', array('jquery', 'bootstrap_js'));
 			wp_enqueue_script( 'bootstrap_show_password_js', '//cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.1.2/bootstrap-show-password.min.js', array('jquery', 'bootstrap_js'), false, true);
 			wp_enqueue_script( 'font_awesome', '//use.fontawesome.com/c5971878d4.js');
-			wp_enqueue_script( 'admin-js', plugin_dir_url(__FILE__ ) . 'js/admin.js', array('jquery'));
 		}
 	}
 
@@ -108,80 +107,6 @@ class Admin
 	 */
 	public function init_admin_options()
 	{
-		add_settings_section(
-			'edp_api_mode_settings',
-			'Donation Setup',
-			array( $this->view, 'mode_section_info' ),
-			'elavon-donation'
-		);
-		add_settings_field(
-			'edp_api_mode',
-			 'System Mode',
-			array( $this->view, 'edp_api_mode_input_html' ),
-			'elavon-donation',
-			'edp_api_mode_settings'
-		);
-
-		// production api credentials
-		// register settings section
-		add_settings_section(
-			'edp_api_prod_settings',
-			'',
-			array( $this->view, 'prod_section_info' ),
-			'elavon-donation'
-		);
-		add_settings_field(
-			'edp_api_account_number_prod',
-			'Merchant ID:',
-			array( $this->view, 'edp_api_account_number_prod_html' ),
-			'elavon-donation',
-			'edp_api_prod_settings'
-		);
-		add_settings_field(
-			'edp_api_user_id_prod',
-			'User ID:',
-			array( $this->view, 'edp_api_user_id_prod_html' ),
-			'elavon-donation',
-			'edp_api_prod_settings'
-		);
-		add_settings_field(
-			'edp_api_pass_prod',
-			'PIN:',
-			array( $this->view, 'edp_api_pass_prod_html' ),
-			'elavon-donation',
-			'edp_api_prod_settings'
-		);
-
-		// test api credentials
-		// register settings section
-		add_settings_section(
-			'edp_api_test_settings',
-			'',
-			array( $this->view, 'test_section_info' ),
-			'elavon-donation'
-		);
-		add_settings_field(
-			'edp_api_account_number_test',
-			'Demo Merchant ID:',
-			array( $this->view, 'edp_api_account_number_test_html' ),
-			'elavon-donation',
-			'edp_api_test_settings'
-		);
-		add_settings_field(
-			'edp_api_user_id_test',
-			'Demo User ID:',
-			array( $this->view, 'edp_api_user_id_test_html' ),
-			'elavon-donation',
-			'edp_api_test_settings'
-		);
-		add_settings_field(
-			'edp_api_pass_test',
-			'Demo PIN:',
-			array( $this->view, 'edp_api_pass_test_html' ),
-			'elavon-donation',
-			'edp_api_test_settings'
-		);
-
 		// register live account options
 		register_setting( 'edp_options', 'edp_api_mode'/*, array($this->validator, 'edp_api_mode')*/ );
 		register_setting( 'edp_options', 'edp_api_account_number_prod',  array($this->validator, 'edp_api_account_number_prod') );
@@ -192,6 +117,7 @@ class Admin
 		register_setting( 'edp_options', 'edp_api_account_number_test', array($this->validator, 'edp_api_account_number_test') );
 		register_setting( 'edp_options', 'edp_api_user_id_test', array($this->validator, 'edp_api_user_id_test') );
 		register_setting( 'edp_options', 'edp_api_pass_test', array($this->validator, 'edp_api_pass_test') );
+
 	}
 
 	/**
@@ -212,9 +138,8 @@ class Admin
 	}
 
 	// only runs if the option is changes
-	public function update_option( $option_name, $old_value, $new_value ) {
-//		var_dump($option_name, $old_value, $new_value);
-//		die('update_option hooked');
+	public function update_option( $option_name, $old_value, $new_value )
+	{
 
 	}
 
