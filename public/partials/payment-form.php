@@ -8,49 +8,47 @@
  */
 ?>
 
-    <div class="alert alert-primary" role="alert">
+<div class="container-fluid">
+
+    <div class="alert alert-primary row" role="alert">
         This is a primary alert—check it out!
     </div>
 
-    <div class="container-fluid">
-        <div class="row">&nbsp;</div>
+    <form name="edp-donation" action="" method="POST">
 
-        <form name="edp-donation" action="" method="POST">
+        <div class="row">
+            <?php include_once plugin_dir_path(__FILE__ ) . 'interactive-credit-card.php'; ?>
+        </div>
 
-            <div class="row">
-
-                <div id="<?php print($atts['id']); ?>" class="card-wrapper"></div><!-- card image container -->
-            </div>
-
+        <div class="card-inputs">
 
             <div class="form-group row">
-                    <input type="text" class="form-control" name="number" placeholder="Card number" autocomplete="cc-number" inputmode="numeric"/>
-                    <small id="numberHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="card-number" class="sr-only">Card Number</label>
+                <input type="tel" class="form-control" name="card-number" placeholder="Card Number" autocomplete="cc-number" />
             </div>
 
             <div class="form-group row">
-                    <input type="text" class="form-control" name="name" placeholder="Cardholder name"/>
+                <label for="cardholder-name" class="sr-only">Card Number</label>
+                <input type="text" class="form-control" name="cardholder-name" placeholder="Cardholder Name"/>
             </div>
 
             <div class="form-group row">
-                <div class="">
-                    <input type="text" class="form-control" name="expiry" placeholder="MM / YY"/>
+                <div class="input-group">
+                    <label for="card-expiration" class="sr-only">Card Expiration Date</label>
+                    <input type="number" class="form-control" name="card-expiration" placeholder="MM / YY"/>
+
+                    <label for="card-cvv" class="sr-only">Card Security Code</label>
+                    <input type="number" class="form-control" name="card-cvv" placeholder="CVV"/>
                 </div>
             </div>
 
             <div class="form-group row">
-                <div class="">
-                    <input type="text" class="form-control" name="cvc" placeholder="CVC"/>
-                </div>
+                <input type="submit" class="btn btn-default col-12" value="Donate" name="submit" />
             </div>
 
-            <div class="form-group row">
-                <div class="">
-                    <input type="submit" value="Donate" name="submit" />
-                </div>
-            </div>
+        </div>
 
-        </form>
+    </form>
 
-    </div>
+</div>
 

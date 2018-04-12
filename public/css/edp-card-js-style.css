@@ -1,27 +1,134 @@
-/*!*****************************************/
- /** Style Card.js*/
- /****************************************!*/
+/****************************************
+ * General Styles
+ ***************************************/
+.hidden {
+    display: none;
+}
 
-@media screen and (max-width: 396px) {
-    #edp-cc-form{
-        overflow: hidden;
-    }
+/****************************************
+ * Credit Card Image
+ ***************************************/
+.card-wrap {
+    font-family: 'Courier New', 'Monospaced';
+    text-shadow: -0.7px 0.3px 0.1px #FFFFFF, 1px -0.4px 2.6px #272727;
+    color: rgba(0,0,0,0.6);
+    width: 100%;
+    margin-bottom: 15px;
+}
 
-    .jp-card, .jp-card-front, .jp-card, .jp-card-back {
-        /*overflow: hidden;*/
-        min-width: 100%;
-    }
+.card-front {
+    position: relative;
+}
 
-    #edp-cc-form .jp-card-number.jp-card-display {
-        font-size: 16px;
-    }
+.card-front,
+#card-front-bg,
+.card-inputs{
+    width: 100%;
+    max-width: 430px;
+    min-width: 200px;
+    margin: auto;
+}
 
-    #edp-cc-form .jp-card-name.jp-card-display {
-        font-size: 16px;
-    }
+#card-front-bg {
+    -webkit-box-shadow: rgba(0,0,0,0.625) 1.5px 1.5px 15px;
+    -moz-box-shadow: rgba(0,0,0,0.625) 1.5px 1.5px 15px;
+    box-shadow: rgba(0,0,0,0.625) 1.5px 1.5px 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 5%;
+}
 
-    .jp-card .jp-card-front .jp-card-display, .jp-card .jp-card-back .jp-card-display {
-        color: #000;
-    }
+.card-top {
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
 
+.card-smartchip {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    max-width: 10%;
+}
+
+.card-number {
+    position: absolute;
+    top: 48%;
+    padding: 0 5% 0;
+}
+
+.card-number,
+.card-number-placeholder,
+.cardholder-name,
+.cardholder-name-placeholder,
+.card-expiry,
+.card-expiry-placeholder {
+    width: 100%;
+    height: 10%;
+}
+
+.cardholder-name {
+    position: absolute;
+    top: 75%;
+    padding: 0 5% 0;
+}
+
+.card-cardholder-name-placeholder {
+    text-transform: uppercase;
+}
+
+.card-expiry {
+    position: absolute;
+    top: 75%;
+    padding: 0 5% 0;
+}
+
+.card-expiry-placeholder {
+    text-align: right;
+}
+
+.card-logo {
+    background-image: url(https://www.merchantequip.com/image/?logos=v|m|a|d|p|ec|dc&height=64);
+    background-size: cover;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 19%;
+    min-height: 25%;
+    max-height: 30%;
+}
+
+#card-logo-img {
+    position: absolute;
+    transform: scale(9);
+}
+
+.card-logo-master {
+    background-position: 17%;
+}
+
+.card-logo-amex {
+    background-position: 33%;
+}
+
+.card-logo-discover {
+    background-position: 50%;
+}
+
+.card-logo-diner {
+    background-position: 100%;
+}
+
+/****************************************
+ * Credit Card Form
+ ***************************************/
+form[name='edp-donation'] input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+form[name='edp-donation'] input[type='number']::-webkit-outer-spin-button,
+form[name='edp-donation'] input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

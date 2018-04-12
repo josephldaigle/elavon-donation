@@ -58,7 +58,7 @@ class Elavon_Donation_Public
 		 * class.
 		 */
 		wp_enqueue_style( 'bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
-		wp_enqueue_style( 'dep_style', plugins_url('css/edp-style.css', __FILE__) );
+		wp_enqueue_style( 'edp_style', plugins_url('css/edp-style.css', __FILE__) );
 	}
 
 	/**
@@ -83,6 +83,9 @@ class Elavon_Donation_Public
 		wp_enqueue_script( 'jquery_slim', '//code.jquery.com/jquery-3.2.1.slim.min.js');
 		wp_enqueue_script( 'popper_js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
 		wp_enqueue_script( 'bootstrap_js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+		wp_enqueue_script( 'jquery_mask', '//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js', array('jquery') );
+		wp_enqueue_script( 'fittext_js', '//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js');
+
 	}
 
 }
