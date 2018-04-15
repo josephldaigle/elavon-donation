@@ -80,7 +80,6 @@ jQuery('form[name="edp-donation"]').find('input[name="card-expiration"]').on('ch
 /**
  * Add CCV to credit card graphic
  */
-
 function maskCreditCardInputs() {
     // mask inputs
     jQuery('form[name="edp-donation"]').find('input[name="card-number"]').mask('0000 0000 0000 0000');

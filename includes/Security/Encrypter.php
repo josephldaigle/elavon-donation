@@ -27,6 +27,7 @@ class Encrypter
 
 	/**
 	 * Decrypt Text
+	 *
 	 * @link https://shellcreeper.com/?p=2082
 	 */
 	public function decrypt( $encrypted_text ){

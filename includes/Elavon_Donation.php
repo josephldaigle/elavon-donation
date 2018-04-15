@@ -137,4 +137,5 @@ class Elavon_Donation
 	{
 		return $this->plugin_version;
 	}
+
 }

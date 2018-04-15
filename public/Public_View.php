@@ -30,14 +30,4 @@ class Public_View
 		$this->shortcodes = $shortcodes;
 	}
 
-	/**
-	 * Get the donation form html.
-	 */
-	public function render_donation_form()
-	{
-		// add js to page
-
-		// render shortcode
-//		$this->shortcodes->donation_form_shortcode();
-	}
 }
